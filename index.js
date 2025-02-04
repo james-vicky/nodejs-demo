@@ -3,13 +3,13 @@ const app = express();
 
 // Define a simple route
 app.get("/", (req, res) => {
-  res.send("Hello, Vercel! Your Node.js app is running successfully.");
+  res.send("This is the home page.");
 });
 
 // Define a dynamic route
 app.get("/api/greet/:name", (req, res) => {
   const { name } = req.params;
-  res.json({ message: `Hello, ${name}! Welcome to the Vercel-deployed app.` });
+  res.send(`Hello, ${name}! Welcome to the Vercel-deployed app.`);
 });
 
 // Listen on the default port provided by Vercel
